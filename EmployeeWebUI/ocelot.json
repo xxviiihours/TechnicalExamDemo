@@ -1,0 +1,64 @@
+﻿{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Dashboard/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44341
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Dashboard/{everything}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Employees",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44341
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Employees",
+      "UpstreamHttpMethod": [ "GET", "POST"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Employees/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44341
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Employees/{id}",
+      "UpstreamHttpMethod": [ "DELETE", "PUT", "PATCH" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Departments",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44341
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Departments",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+     {
+      "DownstreamPathTemplate": "/api/Departments/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44341
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Departments/{id}",
+      "UpstreamHttpMethod": [ "DELETE", "PUT", "PATCH"]
+    }
+  ]
+}

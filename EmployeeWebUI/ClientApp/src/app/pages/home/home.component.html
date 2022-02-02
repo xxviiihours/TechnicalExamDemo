@@ -1,0 +1,21 @@
+<div class="mainContainer">
+  <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="/home/#">Demo Portal</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+              <a class="nav-item nav-link" routerLink="/home">Home</a>
+              <a class="nav-item nav-link" routerLink="/home/manage-departments" routerLinkActive="active">Manage Departments</a>
+              <a class="nav-item nav-link" routerLink="/home/manage-employees/" routerLinkActive="active">Manage Employees</a>
+          </div>
+      </div>
+  </nav><br><br><br>
+  <main role="main">
+      <div class="container">
+          <router-outlet></router-outlet>
+      </div>
+  </main>
+</div>

@@ -1,0 +1,136 @@
+<p>manage-employees works!</p>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#employeeModal">
+  <i class="fa fa-plus"></i> Add New Employee
+</button>
+<button type="button" class="btn btn-primary" (click)="loadEmployees()">
+  <i class="fa fa-refresh"></i> Refresh Table
+</button>
+<div #employeeModal class="modal fade" id="employeeModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">{{isViewedToEdit ? 'Update Employee' : 'Add New Employee'}}</h4>
+        <button type="button" class="close" (click)="clearFields()" data-dismiss="modal">&times;</button>
+      </div>
+
+      <form [formGroup]="employeeForm" (ngSubmit)="handleSubmit()">
+        <div class="modal-body">
+          <div class="container">
+            <div class="form-group">
+              <label for="firstName">First Name:</label>
+              <input type="text" class="form-control" formControlName="firstName"
+                [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" id="firstName">
+              <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                <div *ngIf="f.firstName.errors.required">First name is required.</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="middleName">Middle Name:</label>
+              <input type="text" class="form-control" formControlName="middleName" id="middleName">
+              <div *ngIf="submitted && f.middleName.errors" class="invalid-feedback">
+                <div *ngIf="f.middleName.errors.required">Middle name is required.</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name:</label>
+              <input type="text" class="form-control" formControlName="lastName"
+                [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" id="lastName">
+              <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                <div *ngIf="f.lastName.errors.required">Last name is required.</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="departmentId">Select Department:</label>
+              <ng-select class="form-control" formControlName="departmentId"
+                [ngClass]="{ 'is-invalid': submitted && f.departmentId.errors }" id="departmentId">
+                <ng-option *ngFor="let department of departments" [value]="department.departmentId">{{department.name}}</ng-option>
+              </ng-select>
+              <div *ngIf="submitted && f.departmentId.errors" class="invalid-feedback">
+                <div *ngIf="f.departmentId.errors.required">Department is required.</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactNumber">Contact Number:</label>
+              <input type="text" class="form-control" formControlName="contactNumber" id="contactNumber">
+            </div>
+            <div class="form-group">
+              <label for="emailAddress">Email Address:</label>
+              <input type="email" class="form-control" formControlName="emailAddress"
+                [ngClass]="{ 'is-invalid': submitted && f.emailAddress.errors }" id="emailAddress">
+              <div *ngIf="submitted && f.emailAddress.errors" class="invalid-feedback">
+                <div *ngIf="f.emailAddress.errors.required">Email address is required.</div>
+                <div *ngIf="f.emailAddress.errors.email">Invalid Email address.</div>
+              </div>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" formControlName="isActive"
+                [ngClass]="{ 'is-invalid': submitted && f.isActive.errors }" id="isActive" />
+              <label for="isActive" class="form-check-label">{{f.isActive.value ? 'Active' : 'Inactive'}}</label>
+              <div *ngIf="submitted && f.isActive.errors" class="invalid-feedback">
+                <div *ngIf="f.isActive.errors.required">Status is required.</div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" [disabled]="isLoading">
+              <i class="fa fa-plus"></i> {{isViewedToEdit ? isLoading ? 'Updating...': 'Update' : isLoading ?
+              'Saving...' : 'Save'}}
+            </button>
+            <button type="button" class="btn btn-danger" (click)="clearFields()" data-dismiss="modal">
+              <i class="fa fa-close"></i> Close
+            </button>
+
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<br /><br />
+<ng-template #loading>
+  Loading...
+</ng-template>
+<table class="table" *ngIf="employees?.length>0; else loading">
+  <thead>
+    <tr>
+      <th scope="col">Employee's Name</th>
+      <th scope="col">Contact Number</th>
+      <th scope="col">Email Address</th>
+      <th scope="col">Department</th>
+      <th scope="col">Status</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <td>
+        {{employee.firstName + " " + employee.middleName + " " + employee.lastName}}
+      </td>
+      <td>
+        {{employee.contactNumber}}
+      </td>
+      <td>
+        {{employee.emailAddress}}
+      </td>
+      <td>
+        {{employee?.department.name}}
+      </td>
+      <td>
+        {{employee.isActive ? 'Active' : 'Inactive'}}
+      </td>
+      <td>
+        <button type="button" class="btn btn-primary" (click)="handleViewToEdit(employee)"
+        data-toggle="modal" data-target="#employeeModal">
+          <i class="fa fa-pencil"></i> Edit
+        </button>
+        <button type="button" class="btn btn-danger" (click)="handleDelete(employee)">
+          <i class="fa fa-trash"></i> Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

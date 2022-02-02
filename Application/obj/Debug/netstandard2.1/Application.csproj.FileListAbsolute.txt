@@ -1,0 +1,10 @@
+C:\Users\Kevin Macalalag\source\repos\EmployeeExamDemo\Application\obj\Debug\netstandard2.1\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kevin Macalalag\source\repos\EmployeeExamDemo\Application\obj\Debug\netstandard2.1\Application.AssemblyInfoInputs.cache
+C:\Users\Kevin Macalalag\source\repos\EmployeeExamDemo\Application\obj\Debug\netstandard2.1\Application.AssemblyInfo.cs
+C:\Users\Kevin Macalalag\source\repos\EmployeeExamDemo\Application\obj\Debug\netstandard2.1\Application.csproj.CoreCompileInputs.cache
+C:\Users\Kevin Macalalag\source\repos\EmployeeExamDemo\Application\obj\Debug\netstandard2.1\Application.csproj.AssemblyReference.cache
+C:\Users\Kevin Macalalag\source\repos\EmployeeExamDemo\Application\bin\Debug\netstandard2.1\DEMO.Application.deps.json
+C:\Users\Kevin Macalalag\source\repos\EmployeeExamDemo\Application\bin\Debug\netstandard2.1\DEMO.Application.dll
+C:\Users\Kevin Macalalag\source\repos\EmployeeExamDemo\Application\bin\Debug\netstandard2.1\DEMO.Application.pdb
+C:\Users\Kevin Macalalag\source\repos\EmployeeExamDemo\Application\obj\Debug\netstandard2.1\DEMO.Application.dll
+C:\Users\Kevin Macalalag\source\repos\EmployeeExamDemo\Application\obj\Debug\netstandard2.1\DEMO.Application.pdb

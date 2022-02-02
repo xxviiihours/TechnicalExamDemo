@@ -1,0 +1,12 @@
+<p>dashboard works!</p>
+
+
+<ng-template #loading>
+  Loading...
+</ng-template>
+
+<h4>Employee Status Summary</h4> <br />
+<div *ngIf="statusData !== null || {}; else loading">
+  Total Active: {{statusData.totalActive}} <br />
+  Total Inactive: {{statusData.totalInactive}}
+</div>

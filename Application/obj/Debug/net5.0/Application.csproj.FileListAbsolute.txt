@@ -1,0 +1,12 @@
+C:\Users\Kevin Macalalag\source\repos\EmployeeExamDemo\Application\obj\Debug\net5.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kevin Macalalag\source\repos\EmployeeExamDemo\Application\obj\Debug\net5.0\Application.AssemblyInfoInputs.cache
+C:\Users\Kevin Macalalag\source\repos\EmployeeExamDemo\Application\obj\Debug\net5.0\Application.AssemblyInfo.cs
+C:\Users\Kevin Macalalag\source\repos\EmployeeExamDemo\Application\obj\Debug\net5.0\Application.csproj.CoreCompileInputs.cache
+C:\Users\Kevin Macalalag\source\repos\EmployeeExamDemo\Application\bin\Debug\net5.0\Application.deps.json
+C:\Users\Kevin Macalalag\source\repos\EmployeeExamDemo\Application\bin\Debug\net5.0\Application.dll
+C:\Users\Kevin Macalalag\source\repos\EmployeeExamDemo\Application\bin\Debug\net5.0\ref\Application.dll
+C:\Users\Kevin Macalalag\source\repos\EmployeeExamDemo\Application\bin\Debug\net5.0\Application.pdb
+C:\Users\Kevin Macalalag\source\repos\EmployeeExamDemo\Application\obj\Debug\net5.0\Application.dll
+C:\Users\Kevin Macalalag\source\repos\EmployeeExamDemo\Application\obj\Debug\net5.0\ref\Application.dll
+C:\Users\Kevin Macalalag\source\repos\EmployeeExamDemo\Application\obj\Debug\net5.0\Application.pdb
+C:\Users\Kevin Macalalag\source\repos\EmployeeExamDemo\Application\obj\Debug\net5.0\Application.csproj.AssemblyReference.cache
